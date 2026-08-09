@@ -13,7 +13,6 @@ import subprocess
 
 
 
-import mysql.connector as MySQL
-from mysql.connector import Error as MySQLError
+import mysql.connector as MySQL_Connector
 import oracledb as OracleSQL
 import psycopg2 as PostgreSQL
