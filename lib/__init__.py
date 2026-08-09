@@ -13,6 +13,29 @@ import subprocess
 
 
 
+from .Config import Config
+config = Config(
+    './config.json',
+    {
+        'File_Reading': {
+            'default': {
+                'mode': 'raw',
+                'decode': 'latin-1',
+                'label': r'\S{3} \S{6} \S{3}'
+            },
+            '.pdf': {
+                'mode': 'ocr',
+                'label': r'\S{3} \S{6} \S{3}'
+            }
+        },
+        'Directory_Mapping': {
+            '//PrintReciver/Pot_1/': 'Universal-Printer'
+        }
+    }
+)
+
+
+
 from .Network import Ping
 
 
